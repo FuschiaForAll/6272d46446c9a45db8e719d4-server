@@ -26,6 +26,7 @@ import { graphqlUploadExpress } from 'graphql-upload'
 import { S3Uploader } from './utils/s3-uploader'
 import { AuthenticationResolver } from './Authentication/Authentication.resolver'
 import { UserResolver } from './User/User.resolver'
+import { ToDoResolver } from './ToDo/ToDo.resolver'
 
 (async () => {
 
@@ -50,6 +51,7 @@ import { UserResolver } from './User/User.resolver'
     resolvers: [
       AuthenticationResolver,
       UserResolver,
+      ToDoResolver,
     ],
     emitSchemaFile: path.resolve(__dirname, "schema.graphql"),
     globalMiddlewares: [TypegooseMiddleware],

@@ -1,6 +1,6 @@
 {
     "name": "fuchsia-6272d46446c9a45db8e719d4",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "main": "index.js",
     "license": "MIT",
     "scripts": {
