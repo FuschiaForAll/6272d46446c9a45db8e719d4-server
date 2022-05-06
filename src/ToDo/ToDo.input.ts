@@ -6,15 +6,15 @@ import { ModelStringInput } from '../common.input'
 
 @InputType()
 export class CreateToDoInput {
-  @Field({ nullable: undefined })
-  undefined!: string
+  @Field({ nullable: true })
+  Description?: string
 }
 
 
 @InputType()
 export class UpdateToDoInput {
   @Field({ nullable: true })
-  undefined?: string
+  Description?: string
 }
 
 
@@ -30,7 +30,7 @@ export class ModelToDoConditionalInput {
   @Field(type => ObjectIdScalar)
   _id!: ObjectId
   @Field(type => ModelStringInput, { nullable: true })
-  undefined?: ModelStringInput
+  Description?: ModelStringInput
   @Field(type => [ModelToDoConditionalInput], { nullable: true })
   and?: ModelToDoConditionalInput[]
   @Field(type => [ModelToDoConditionalInput], { nullable: true })
@@ -45,7 +45,7 @@ export class ModelToDoFilterInput {
   @Field(type => ObjectIdScalar, { nullable: true })
   _id!: ObjectId
   @Field(type => ModelStringInput, { nullable: true })
-  undefined?: ModelStringInput
+  Description?: ModelStringInput
   @Field(type => [ModelToDoFilterInput], { nullable: true })
   and?: ModelToDoFilterInput[]
   @Field(type => [ModelToDoFilterInput], { nullable: true })
