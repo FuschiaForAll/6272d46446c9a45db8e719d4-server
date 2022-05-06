@@ -6,19 +6,19 @@ import { ModelStringInput } from '../common.input'
 
 @InputType()
 export class CreateUserInput {
-  @Field({ nullable: false })
-  email!: string
-  @Field({ nullable: false })
-  password!: string
+  @Field({ nullable: undefined })
+  undefined!: string
+  @Field({ nullable: undefined })
+  undefined!: string
 }
 
 
 @InputType()
 export class UpdateUserInput {
   @Field({ nullable: true })
-  email?: string
+  undefined?: string
   @Field({ nullable: true })
-  password?: string
+  undefined?: string
 }
 
 
@@ -34,9 +34,9 @@ export class ModelUserConditionalInput {
   @Field(type => ObjectIdScalar)
   _id!: ObjectId
   @Field(type => ModelStringInput, { nullable: true })
-  email?: ModelStringInput
+  undefined?: ModelStringInput
   @Field(type => ModelStringInput, { nullable: true })
-  password?: ModelStringInput
+  undefined?: ModelStringInput
   @Field(type => [ModelUserConditionalInput], { nullable: true })
   and?: ModelUserConditionalInput[]
   @Field(type => [ModelUserConditionalInput], { nullable: true })
@@ -51,9 +51,9 @@ export class ModelUserFilterInput {
   @Field(type => ObjectIdScalar, { nullable: true })
   _id!: ObjectId
   @Field(type => ModelStringInput, { nullable: true })
-  email?: ModelStringInput
+  undefined?: ModelStringInput
   @Field(type => ModelStringInput, { nullable: true })
-  password?: ModelStringInput
+  undefined?: ModelStringInput
   @Field(type => [ModelUserFilterInput], { nullable: true })
   and?: ModelUserFilterInput[]
   @Field(type => [ModelUserFilterInput], { nullable: true })
